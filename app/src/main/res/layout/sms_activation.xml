@@ -75,6 +75,8 @@
         android:layout_marginTop="50dp"
         android:contentDescription="no"
         android:layoutDirection="ltr"
+        android:autofillHints="smsOTPCode"
+        android:importantForAutofill="yes"
         android:paddingBottom="12dp"
         app:BottomErrorIcon="@color/accent_red"
         app:BottomIconHeight="2dp"

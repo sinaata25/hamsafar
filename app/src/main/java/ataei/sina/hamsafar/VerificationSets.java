@@ -34,13 +34,15 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import ataei.sina.hamsafar.interfaces.VerificationSmsListener;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
 
 public class VerificationSets extends AppCompatActivity {
+    public  static  VerificationSmsListener verificationSmsListener;
     FloatingActionButton floatingActionButton;
     EditText editText;
-    MotionLayout motionLayout;
+   // MotionLayout motionLayout;
     int canSend=1;
     LinearLayout linearLayout_phone;
     @Override
@@ -84,7 +86,6 @@ public class VerificationSets extends AppCompatActivity {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, urls.url_login_verif, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
             }
         }, new Response.ErrorListener() {
             @Override
