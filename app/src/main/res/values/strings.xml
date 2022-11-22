@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">hamsafar</string>
+    <string name="intro_1_1">سفری سریع و ارزان</string>
+    <string name="intro_1_2">با همسفر سریع تر و ارزان تر از همیشه سفر کنید</string>
+    <string name="intro_2_1">همسفر یا شاید دوست</string>
+    <string name="intro_2_2">با انتخاب همسفرهای مناسب ممکنه که دوستی های جدیدی به وجود بیاد</string>
+    <string name="intro_3_1">هر کجا که باشه</string>
+    <string name="intro_3_2">فرقی نمیکنه کجا باشه یا چه ساعتی باشه با همسفر شما میتونید همیشه سفر کنید</string>
+    <string name="intro_4_1">آماده شروع کردن هستی؟</string>
+    <string name="intro_4_2">اگه میخوای از امکانات همسفر استفاده کنی همین الان وارد برنامه شو</string>
+    <string name="forgrt_it">ولش کن بابا</string>
+    <string name="login">ورود</string>
+    <string name="close">بستن</string>
+    <string name="welcome">خوش آمدید!</string>
+    <string name="for_using_app">برای استفاده از برنامه شماره تماس خود را وارد کنید</string>
+    <string name="accept_rules">با ثبت نام در همسفر</string>
+    <string name="accept_rules_1"><a href="http://www.google.com">شرایط و قوانین</a></string>
+    <string name="accept_rules_2">را قبول میکنم</string>
+    <string name="we_Send_verif">کد تایید رو براتون فرستادیم</string>
+    <string name="send_again">دوباره بفرست</string>
+</resources>
