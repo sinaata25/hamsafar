@@ -11,17 +11,18 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hamsafar"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".LogupActivity"
+            android:exported="false" />
+        <activity
             android:name=".SmsActivation"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".VerificationSets"
             android:exported="true">
@@ -30,16 +31,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".IntroActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <receiver android:name=".services.SMSBroadcastReceiver"
+        <receiver
+            android:name=".services.SMSBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />

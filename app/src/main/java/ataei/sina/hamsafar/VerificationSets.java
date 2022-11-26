@@ -34,15 +34,17 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
+import ataei.sina.hamsafar.interfaces.Finish;
+import ataei.sina.hamsafar.interfaces.VerificationResponse;
 import ataei.sina.hamsafar.interfaces.VerificationSmsListener;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
 
 public class VerificationSets extends AppCompatActivity {
     public  static  VerificationSmsListener verificationSmsListener;
+    public  static VerificationResponse verificationResponse;
     FloatingActionButton floatingActionButton;
     EditText editText;
-   // MotionLayout motionLayout;
     int canSend=1;
     LinearLayout linearLayout_phone;
     @Override
@@ -86,11 +88,12 @@ public class VerificationSets extends AppCompatActivity {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, urls.url_login_verif, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                verificationResponse.onGetResponse(response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                System.out.println("....................................................\n"+error.getMessage());
+                Toast.makeText(getApplicationContext(),"مشکل در اتصال به سرور",Toast.LENGTH_SHORT).show();
             }
         }){
             @Override
@@ -109,6 +112,9 @@ public class VerificationSets extends AppCompatActivity {
         RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
         stringRequest.setRetryPolicy(new DefaultRetryPolicy());
         requestQueue.add(stringRequest);
+
+
+
     }
 
 
@@ -152,6 +158,13 @@ public class VerificationSets extends AppCompatActivity {
 
            }
        });
+       /////
+       SmsActivation.finish=new Finish() {
+           @Override
+           public void onFinish() {
+                finish();
+           }
+       };
     }
 
 

@@ -18,4 +18,12 @@
     <string name="accept_rules_2">را قبول میکنم</string>
     <string name="we_Send_verif">کد تایید رو براتون فرستادیم</string>
     <string name="send_again">دوباره بفرست</string>
+    <string name="next">بعدی</string>
+    <string name="boro_ke_raftim">برو که رفتیم</string>
+    <string name="moshakhasat">مشخصات فردی</string>
+    <string name="profile_photo">میتونی اینجا یه عکس برای پروفایلت بزاری</string>
+    <string name="choose_alaghe">علایقتو انتخاب کن</string>
+    <string name="name">نام</string>
+    <string name="family">نام خانوادگی</string>
+    <string name="username">نام کاربری</string>
 </resources>
