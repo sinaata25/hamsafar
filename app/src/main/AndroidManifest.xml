@@ -18,20 +18,28 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LogupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SmsActivation"
-            android:exported="true"></activity>
-        <activity
-            android:name=".VerificationSets"
-            android:exported="true">
+            android:name=".LoadingActivityIntro"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogupActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".SmsActivation"
+            android:exported="true" />
+        <activity
+            android:name=".VerificationSets"
+            android:exported="true" />
         <activity
             android:name=".IntroActivity"
             android:exported="true" />

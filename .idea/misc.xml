@@ -11,14 +11,18 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle4.xml" value="0.1975" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2115" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/ic_launcher_background.xml" value="0.157" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading.xml" value="0.2" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading_intro.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_1_fragment.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_2_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_3_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_4_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/item_recycler_logup3_fragment.xml" value="0.5" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_1_fragment.xml" value="0.18" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_2_fragment.xml" value="0.2" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_2_fragment.xml" value="0.16" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_3_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_activity.xml" value="0.18" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/test.xml" value="0.16" />

@@ -20,12 +20,23 @@
         app:nodeHeight="50dp"
         app:colorInactive="@color/gray_60"
         app:stepsCount="4"
+        app:arcColor="@color/primary_blue"
         app:textNodeColor="@color/black"
         app:textNodeSize="20dp"
         android:layout_marginHorizontal="30dp"
         app:textNodeTitleSize="14sp"
         app:textTitlePadding="5dp"
         />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_logup"
+        android:layout_width="406dp"
+        android:layout_height="487dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vStepProgress" />
 
     <TextView
         android:layout_width="match_parent"
@@ -34,14 +45,14 @@
         android:background="@drawable/cardstyle1"
         android:fontFamily="@font/vazir"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
         android:text="@string/next"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vStepProgress"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.958" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

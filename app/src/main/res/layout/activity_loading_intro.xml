@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/primary_blue"
+    android:layout_height="match_parent"
+    tools:context=".LoadingActivityIntro">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/tasvir_start">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/start_matn"
+        android:fontFamily="@font/vazir"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:text="Hamsafar"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.8"/>
+    <ImageView android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:id="@+id/imageView"
+        android:layout_weight="0.2"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@mipmap/car"
+        android:alpha="1"/>
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
