@@ -24,6 +24,7 @@ public class LogupActivity extends AppCompatActivity {
 ViewPager viewPager;
 AdapterViewPagerLogup adapterViewPagerLogup;
 StepProgressView stepProgressView;
+public static Check check;
 TextView go;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,13 @@ TextView go;
                         }
                     }
                 });
+        //////////
+        go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                check.onclicked(viewPager,stepProgressView);
+            }
+        });
     }
 
     private void setUps() {
@@ -59,6 +67,7 @@ TextView go;
         viewPager.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                viewPager.setCurrentItem(viewPager.getCurrentItem());
                 return true;
             }
         });
@@ -69,5 +78,10 @@ TextView go;
         viewPager=findViewById(R.id.viewPager_logup);
         stepProgressView=findViewById(R.id.vStepProgress);
         go=findViewById(R.id.textView6);
+
     }
+    public interface Check{
+        void onclicked(ViewPager viewPager,StepProgressView stepProgressView);
+    }
+
 }

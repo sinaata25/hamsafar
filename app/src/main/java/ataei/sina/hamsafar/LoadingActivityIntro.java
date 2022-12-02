@@ -32,7 +32,7 @@ public class LoadingActivityIntro extends AppCompatActivity {
                         Intent x = new Intent(LoadingActivityIntro.this, MainActivity.class);
                         startActivity(x);
                     }else {
-                        Intent x = new Intent(LoadingActivityIntro.this, VerificationSets.class);
+                        Intent x = new Intent(LoadingActivityIntro.this, IntroActivity.class);
                         startActivity(x);
                     }
 

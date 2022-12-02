@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import ataei.sina.hamsafar.LogupActivity;
 import ataei.sina.hamsafar.MainActivity;
 import ataei.sina.hamsafar.R;
+import ataei.sina.hamsafar.VerificationSets;
 
 
 public class Intro_4_Fragment extends Fragment {
@@ -36,11 +37,11 @@ public class Intro_4_Fragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                SharedPreferences.Editor editor = sharedPref.edit();
+              SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putInt("first_time",0);
-                editor.apply();*/
+                editor.apply();
                 getActivity().finish();
-                Intent intent=new Intent(getContext(), LogupActivity.class);
+                Intent intent=new Intent(getContext(), VerificationSets.class);
                 startActivity(intent);
             }
         });

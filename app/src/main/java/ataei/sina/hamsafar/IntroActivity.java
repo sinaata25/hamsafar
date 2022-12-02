@@ -46,11 +46,11 @@ TextView close;
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                SharedPreferences.Editor editor = sharedPref.edit();
+               SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putInt("first_time",0);
-                editor.apply();*/
+                editor.apply();
                 finish();
-                Intent intent=new Intent(getApplicationContext(), LogupActivity.class);
+                Intent intent=new Intent(getApplicationContext(), VerificationSets.class);
                 startActivity(intent);
 
             }
