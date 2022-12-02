@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -32,6 +34,8 @@ TextView close;
     }
 
     private void sets() {
+
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("shared", Context.MODE_PRIVATE);
         adapterViewPagerIntro=new AdapterViewPagerIntro(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,getApplicationContext());
         adapterViewPagerIntro.addfragment(new Intro_1_Fragment());
         adapterViewPagerIntro.addfragment(new Intro_2_Fragment());
@@ -42,8 +46,13 @@ TextView close;
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+/*                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putInt("first_time",0);
+                editor.apply();*/
+                finish();
+                Intent intent=new Intent(getApplicationContext(), LogupActivity.class);
                 startActivity(intent);
+
             }
         });
 
