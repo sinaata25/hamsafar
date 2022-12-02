@@ -26,4 +26,5 @@
     <string name="name">نام</string>
     <string name="family">نام خانوادگی</string>
     <string name="username">نام کاربری</string>
+    <string name="wait">کمی صبر کنید...</string>
 </resources>
