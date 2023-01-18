@@ -6,53 +6,64 @@
     android:layout_height="match_parent">
 
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="82dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:background="@drawable/main_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <ImageView
+            android:id="@+id/Home_bot"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/home_selected"
+            android:onClick="Home_clicked"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="82dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@drawable/main_bottom"
-            >
+        <ImageView
+            android:id="@+id/Discovery_bot"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/discover"
+            android:onClick="Discovery_clicked"/>
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:src="@mipmap/home" />
+        <ImageView
+            android:id="@+id/History_bot"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:src="@mipmap/history"
+            android:onClick="History_clicked"/>
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:layout_marginRight="40dp"
-                android:src="@mipmap/discover" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:layout_marginLeft="40dp"
-                android:src="@mipmap/history" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:src="@mipmap/profile" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/Profile_bot"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="Profile_clicked"
+            android:src="@mipmap/profile" />
+    </LinearLayout>
 
 
     <ImageView
