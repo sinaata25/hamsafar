@@ -64,7 +64,7 @@
                     android:id="@+id/profile_img"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@tools:sample/avatars"/>
+                    android:src="@mipmap/add"/>
 
 
             </LinearLayout>
