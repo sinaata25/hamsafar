@@ -74,7 +74,7 @@
                     android:id="@+id/profile_img2"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:src="@tools:sample/avatars" />
+                    android:src="@mipmap/profile_header" />
 
             </LinearLayout>
 

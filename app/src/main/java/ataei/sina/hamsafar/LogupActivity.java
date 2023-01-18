@@ -25,6 +25,8 @@ ViewPager viewPager;
 AdapterViewPagerLogup adapterViewPagerLogup;
 StepProgressView stepProgressView;
 public static Check check;
+    public static Check check_1;
+    public static Check check_2;
 TextView go;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,14 @@ TextView go;
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                check.onclicked(viewPager,stepProgressView);
+                if(viewPager.getCurrentItem()==0){
+                    check.onclicked(viewPager,stepProgressView);
+                }else if(viewPager.getCurrentItem()==1){
+                    check_1.onclicked(viewPager,stepProgressView);
+                }else {
+                    check_2.onclicked(viewPager,stepProgressView);
+                }
+
             }
         });
     }
@@ -81,6 +90,12 @@ TextView go;
 
     }
     public interface Check{
+        void onclicked(ViewPager viewPager,StepProgressView stepProgressView);
+    }
+    public interface Check_1{
+        void onclicked(ViewPager viewPager,StepProgressView stepProgressView);
+    }
+    public interface Check_2{
         void onclicked(ViewPager viewPager,StepProgressView stepProgressView);
     }
 

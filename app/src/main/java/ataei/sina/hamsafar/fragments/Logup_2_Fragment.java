@@ -16,7 +16,11 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
+import com.funrisestudio.stepprogress.StepProgressView;
+
+import ataei.sina.hamsafar.LogupActivity;
 import ataei.sina.hamsafar.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -52,6 +56,19 @@ public class Logup_2_Fragment extends Fragment {
                 imageChooser();
             }
         });
+        ///
+        LogupActivity.check_1=new LogupActivity.Check() {
+            @Override
+            public void onclicked(ViewPager viewPager, StepProgressView stepProgressView) {
+                    viewPager.setCurrentItem(2);
+                    stepProgressView.nextStep(true);
+
+            }
+        };
+
+
+
+
 
     }
 

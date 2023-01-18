@@ -1,93 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_marginVertical="5dp"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="150dp">
+    android:layout_height="120dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="130dp"
+        android:layout_width="40dp"
+       app:cardCornerRadius="20dp"
         android:layout_marginHorizontal="5dp"
-        app:cardCornerRadius="20dp"
         android:layout_weight=".3"
-        android:layout_height="150dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:background="@drawable/cardstyle8"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="60dp"
                 android:layout_marginTop="10dp"
                 android:src="@mipmap/intro2"
-                android:layout_marginHorizontal="10dp"
-                android:layout_height="90dp"/>
+                android:id="@+id/imgview_1_logup3"
+                android:layout_gravity="center"
+                android:layout_height="60dp"/>
+
             <TextView
+                android:id="@+id/textview_1_logup3"
                 android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:textSize="20dp"
                 android:fontFamily="@font/vazir"
+                android:gravity="center"
                 android:text="سلام"
-                android:layout_height="40dp"/>
+                android:textSize="17dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:layout_width="130dp"
+        android:layout_width="40dp"
         android:layout_marginHorizontal="5dp"
         app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
         android:layout_weight=".3"
-        android:layout_height="150dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            app:cardBackgroundColor="@color/white"
+            android:background="@drawable/cardstyle8"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="60dp"
                 android:layout_marginTop="10dp"
                 android:src="@mipmap/intro2"
-                android:layout_marginHorizontal="10dp"
-                android:layout_height="90dp"/>
+                android:layout_gravity="center"
+                android:id="@+id/imgview_2_logup3"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="60dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="17dp"
+                android:id="@+id/textview_2_logup3"
                 android:fontFamily="@font/vazir"
                 android:text="سلام"
-                android:layout_height="40dp"/>
+                android:layout_height="30dp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:layout_width="130dp"
+        android:layout_width="40dp"
         android:layout_marginHorizontal="5dp"
         app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
         android:layout_weight=".3"
-        android:layout_height="150dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:background="@drawable/cardstyle8"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="60dp"
                 android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/imgview_3_logup3"
                 android:src="@mipmap/intro2"
-                android:layout_marginHorizontal="10dp"
-                android:layout_height="90dp"/>
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="60dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
                 android:fontFamily="@font/vazir"
+                android:id="@+id/textview_3_logup3"
                 android:text="سلام"
-                android:layout_height="40dp"/>
+                android:layout_height="30dp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
