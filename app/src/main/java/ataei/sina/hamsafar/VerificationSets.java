@@ -68,9 +68,6 @@ public class VerificationSets extends AppCompatActivity {
                     intent.putExtra("number",editText.getText().toString());
                     startActivity(intent);
                 }
-
-
-
             }
         });
 

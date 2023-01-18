@@ -9,22 +9,34 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle2.xml" value="0.171" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle3.xml" value="0.171" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle4.xml" value="0.1975" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle5.xml" value="0.1425" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle6.xml" value="0.1425" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle7.xml" value="0.1425" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2115" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/ic_launcher_background.xml" value="0.157" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/main_bottom.xml" value="0.1425" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading_intro.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/discovery_page.xml" value="0.2" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page.xml" value="0.2" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page_items.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro.xml" value="0.2" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_1_fragment.xml" value="0.2" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_1_fragment.xml" value="0.5" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_2_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_3_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_4_fragment.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/item_recycler_logup3_fragment.xml" value="0.5" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/item_recycler_logup3_fragment.xml" value="0.25" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/last_min.xml" value="0.67" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_1_fragment.xml" value="0.18" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_2_fragment.xml" value="0.16" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_2_fragment.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_3_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_activity.xml" value="0.18" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/main.xml" value="0.18" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/profile_page.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.18" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/test.xml" value="0.16" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/verification_sets.xml" value="0.22" />
       </map>

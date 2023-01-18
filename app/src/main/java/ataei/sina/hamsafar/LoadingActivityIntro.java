@@ -29,7 +29,7 @@ public class LoadingActivityIntro extends AppCompatActivity {
                     SharedPreferences sharedPref =getSharedPreferences("shared",Context.MODE_PRIVATE);
                     int first_time = sharedPref.getInt("first_time",1);
                     if(first_time==0){
-                        Intent x = new Intent(LoadingActivityIntro.this, MainActivity.class);
+                        Intent x = new Intent(LoadingActivityIntro.this, VerificationSets.class);
                         startActivity(x);
                     }else {
                         Intent x = new Intent(LoadingActivityIntro.this, IntroActivity.class);

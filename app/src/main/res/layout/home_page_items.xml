@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/items_home"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="25dp"
+        android:layout_height="434dp"
+        android:layout_marginHorizontal="18dp"
+        card_view:cardCornerRadius="10dp"
+        android:backgroundTint="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/star_img"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@mipmap/star" />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="4.5"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/driver_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="علی احمدی"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/vazir"
+                    android:layout_marginRight="10dp"
+                    android:textSize="14sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/profile_img"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@tools:sample/avatars"/>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_marginTop="15dp"
+                android:layout_width="342dp"
+                android:layout_height="213dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@mipmap/intro4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="10"
+                    android:fontFamily="@font/vazir"
+                    android:gravity="right"
+                    android:text="شیراز - بوشهر"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/location_img"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/location" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/vazir"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="15 بهمن " />
+
+                <ImageView
+                    android:id="@+id/date_img"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/vazir"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="20:30"/>
+
+                <ImageView
+                    android:id="@+id/time_img"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/car_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/vazir"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="پراید 131" />
+
+                <ImageView
+                    android:id="@+id/car_img"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/car_type" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/vazir"
+                    android:text="5000000"/>
+
+                <ImageView
+                    android:id="@+id/price_img"
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/price" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/button2"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="389dp"
+            android:text="@string/join_ride"
+            android:fontFamily="@font/vazir"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/cardstyle1"
+            />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

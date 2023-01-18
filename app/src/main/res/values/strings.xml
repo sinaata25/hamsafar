@@ -27,4 +27,21 @@
     <string name="family">نام خانوادگی</string>
     <string name="username">نام کاربری</string>
     <string name="wait">کمی صبر کنید...</string>
+    <string name="see_more">مشاهده بیشتر</string>
+    <string name="suggestion">سفرهای پیشنهادی</string>
+    <string name="special">سفرهای ویژه</string>
+    <string name="followers">دنبال کنندگان</string>
+    <string name="following">دنبال شوندگان</string>
+    <string name="edit_profile">ویرایش پروفایل</string>
+    <string name="travels">سفرها</string>
+    <string name="search_title">پایه سفرتو پیدا کن</string>
+    <string name="origin">مبداء</string>
+    <string name="destination">مقصد</string>
+    <string name="due_date">تاریخ حرکت</string>
+    <string name="search">جستوجو</string>
+    <string name="last_min">دقیقه آخری ها</string>
+    <string name="lets_go">بریم ببینیم چه خبره</string>
+    <string name="join_ride">همسفر شو</string>
+    <string name="special_kind">ویژه</string>
+    <string name="best_destination">بهترین مقصد ها</string>
 </resources>
