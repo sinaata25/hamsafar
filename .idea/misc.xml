@@ -41,13 +41,13 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/profile_page.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.18" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.25" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/test.xml" value="0.16" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/verification_sets.xml" value="0.22" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

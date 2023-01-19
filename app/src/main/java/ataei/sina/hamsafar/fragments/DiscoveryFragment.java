@@ -32,6 +32,7 @@ import java.util.Map;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.adapters.AdapterRecycleAds;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSpecial;
+import ataei.sina.hamsafar.adapters.AdapterRecycleSuggested;
 import ataei.sina.hamsafar.model.Advertisment;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
@@ -39,16 +40,66 @@ import ataei.sina.hamsafar.statics.urls;
 public class DiscoveryFragment extends Fragment {
     @Nullable
     View view;
-    RecyclerView special;
+    RecyclerView special,suggested_recycler;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.discovery_page,container,false);
         setUpViews();
         sets();
-        getData();
+        getSpecialAdData();
+        getSuggestedAdData();
         return view;
     }
 
-    private void getData() {
+    private void getSuggestedAdData() {
+        StringRequest request = new StringRequest(Request.Method.POST, urls.url_get_suggested_ads, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    List<Advertisment> ads = new ArrayList<>();
+                    JSONArray jArray = new JSONArray(response);
+                    for(int i = 0 ; i<jArray.length() ; i++){
+                        JSONObject jObject = jArray.getJSONObject(i);
+                        Advertisment advertisment = new Advertisment();
+                        advertisment.setId(jObject.getInt("id"));
+                        advertisment.setId_user(jObject.getInt("id_user"));
+                        advertisment.setOrigin(jObject.getString("origin"));
+                        advertisment.setDestination(jObject.getString("destination"));
+                        advertisment.setDescription(jObject.getString("description"));
+                        advertisment.setTime(jObject.getString("time"));
+                        advertisment.setDate(jObject.getString("date"));
+                        advertisment.setPrice(jObject.getInt("price"));
+                        advertisment.setName(jObject.getString("name"));
+                        ads.add(advertisment);
+                    }
+
+                    suggested_recycler.setAdapter(new AdapterRecycleSuggested(ads , getContext()));
+                } catch (JSONException e) {
+                    System.out.println(e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error.getMessage());
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> param;
+                param = new HashMap<>();
+                param.put("key", keys.key_get_suggested_ads);
+                return param;
+            }
+
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(getContext());
+        request.setRetryPolicy(new DefaultRetryPolicy());
+        requestQueue.add(request);
+
+
+    }
+
+    private void getSpecialAdData() {
         StringRequest request = new StringRequest(Request.Method.POST, urls.url_get_special_ads, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -97,10 +148,12 @@ public class DiscoveryFragment extends Fragment {
 
     private void sets() {
         special.setLayoutManager(new LinearLayoutManager(getContext() ,RecyclerView.VERTICAL , false));
+        suggested_recycler.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
     }
 
     private void setUpViews() {
         special = view.findViewById(R.id.special);
+        suggested_recycler=view.findViewById(R.id.suggestion);
     }
 
 }
