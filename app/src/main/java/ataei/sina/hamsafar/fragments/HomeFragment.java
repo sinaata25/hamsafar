@@ -1,9 +1,12 @@
 package ataei.sina.hamsafar.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,6 +41,7 @@ import ataei.sina.hamsafar.statics.urls;
 public class HomeFragment extends Fragment {
 
     RecyclerView aghahiha;
+    TextView textView_welcome;
     @Nullable
     View view;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -99,10 +103,14 @@ public class HomeFragment extends Fragment {
 
     private void sets() {
         aghahiha.setLayoutManager(new LinearLayoutManager(getContext() ,RecyclerView.VERTICAL , false));
+        SharedPreferences sharedPref = getContext().getSharedPreferences("shared", Context.MODE_PRIVATE);
+        String name=sharedPref.getString("name","");
+        textView_welcome.setText("خوش اومدی "+name);
     }
 
     private void setUpViews() {
         aghahiha =view.findViewById(R.id.aghahiha);
+        textView_welcome=view.findViewById(R.id.textView5_home);
     }
 
 
