@@ -1,9 +1,15 @@
 package ataei.sina.hamsafar.fragments;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,10 +43,15 @@ import ataei.sina.hamsafar.adapters.AdapterRecycleSuggested;
 import ataei.sina.hamsafar.model.Advertisment;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
+import ir.hamsaa.persiandatepicker.PersianDatePickerDialog;
+import ir.hamsaa.persiandatepicker.api.PersianPickerDate;
+import ir.hamsaa.persiandatepicker.api.PersianPickerListener;
+import ir.hamsaa.persiandatepicker.util.PersianCalendarUtils;
 
 public class DiscoveryFragment extends Fragment {
     @Nullable
     View view;
+    TextView time_pick;
     RecyclerView special,suggested_recycler;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.discovery_page,container,false);
@@ -47,7 +59,42 @@ public class DiscoveryFragment extends Fragment {
         sets();
         getSpecialAdData();
         getSuggestedAdData();
+        handle();
         return view;
+    }
+
+    private void handle() {
+        time_pick.setOnClickListener(V->datePick());
+    }
+
+    void datePick(){
+        PersianDatePickerDialog picker=new PersianDatePickerDialog(getContext());
+        picker.setPositiveButtonString("باشه")
+                .setNegativeButton("بیخیال")
+                .setTodayButton("امروز")
+                .setTodayButtonVisible(true)
+                .setPickerBackgroundDrawable(R.drawable.cardstyle10)
+                .setMinYear(PersianDatePickerDialog.THIS_YEAR)
+                .setMaxYear(PersianDatePickerDialog.THIS_YEAR)
+                .setActionTextSize(20)
+                .setMaxDay(PersianDatePickerDialog.THIS_DAY)
+                .setInitDate(1401, 12, 1)
+                .setActionTextColor(Color.GRAY)
+                .setTitleType(PersianDatePickerDialog.WEEKDAY_DAY_MONTH_YEAR)
+                .setShowInBottomSheet(true)
+                .setListener(new PersianPickerListener() {
+                    @Override
+                    public void onDateSelected(@NotNull PersianPickerDate persianPickerDate) {
+                        time_pick.setText(persianPickerDate.getPersianYear() + "/" + persianPickerDate.getPersianMonth() + "/" + persianPickerDate.getPersianDay());
+                    }
+
+                    @Override
+                    public void onDismissed() {
+
+                    }
+                });
+
+        picker.show();
     }
 
     private void getSuggestedAdData() {
@@ -154,6 +201,7 @@ public class DiscoveryFragment extends Fragment {
     private void setUpViews() {
         special = view.findViewById(R.id.special);
         suggested_recycler=view.findViewById(R.id.suggestion);
+        time_pick=view.findViewById(R.id.go_time);
     }
 
 }
