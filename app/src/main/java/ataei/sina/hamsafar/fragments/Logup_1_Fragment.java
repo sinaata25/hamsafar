@@ -17,6 +17,9 @@ import com.funrisestudio.stepprogress.StepProgressView;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ataei.sina.hamsafar.LogupActivity;
 import ataei.sina.hamsafar.R;
 
@@ -58,12 +61,16 @@ public class Logup_1_Fragment extends Fragment {
         LogupActivity logupActivity=new LogupActivity();
         logupActivity.check=new LogupActivity.Check() {
             @Override
-            public void onclicked(ViewPager viewPager, StepProgressView stepProgressView) {
+            public List<String> onclicked() {
+                List<String>list=new ArrayList<>();
                 if(!name.getText().toString().equals("") && !family.getText().toString().equals("") && !username.getText().toString().equals("")){
-                    viewPager.setCurrentItem(1);
-                    stepProgressView.nextStep(true);
+                    list.add(username.getText().toString());
+                    list.add(name.getText().toString());
+                    list.add(family.getText().toString());
                 }
+                return list;
             }
+
         };
 
 

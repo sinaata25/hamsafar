@@ -28,11 +28,15 @@ public class LoadingActivityIntro extends AppCompatActivity {
                 if(checkConnection()){
                     SharedPreferences sharedPref =getSharedPreferences("shared",Context.MODE_PRIVATE);
                     int first_time = sharedPref.getInt("first_time",1);
-                    if(first_time==0){
+                    int login = sharedPref.getInt("login",0);
+                    if(first_time==0 && login==0 ){
                         Intent x = new Intent(LoadingActivityIntro.this, VerificationSets.class);
                         startActivity(x);
-                    }else {
+                    }else if(first_time==1 && login==0){
                         Intent x = new Intent(LoadingActivityIntro.this, IntroActivity.class);
+                        startActivity(x);
+                    }else if( first_time==0 && login==1){
+                        Intent x = new Intent(LoadingActivityIntro.this, MainActivity.class);
                         startActivity(x);
                     }
 

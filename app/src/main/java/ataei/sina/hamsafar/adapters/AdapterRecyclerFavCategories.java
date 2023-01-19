@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -51,6 +52,57 @@ public class AdapterRecyclerFavCategories extends RecyclerView.Adapter<AdapterRe
         Picasso.get()
                 .load(sec_list.get(2).getUrl())
                 .into(holder.imageView_3);
+
+
+        holder.linearLayout_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.linearLayout_1.getContentDescription().equals("0")){
+                    holder.linearLayout_1.setContentDescription("1");
+                    holder.linearLayout_1.setBackgroundResource(R.drawable.cardstyle9);
+                }else {
+                    holder.linearLayout_1.setContentDescription("0");
+                    holder.linearLayout_1.setBackgroundResource(R.drawable.cardstyle8);
+                }
+            }
+        });
+
+        holder.linearLayout_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.linearLayout_2.getContentDescription().equals("0")){
+                    holder.linearLayout_2.setContentDescription("1");
+                    holder.linearLayout_2.setBackgroundResource(R.drawable.cardstyle9);
+                }else {
+                    holder.linearLayout_2.setContentDescription("0");
+                    holder.linearLayout_2.setBackgroundResource(R.drawable.cardstyle8);
+                }
+            }
+        });
+
+        holder.linearLayout_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(holder.linearLayout_3.getContentDescription().equals("0")){
+                    holder.linearLayout_3.setContentDescription("1");
+                    holder.linearLayout_3.setBackgroundResource(R.drawable.cardstyle9);
+                }else {
+                    holder.linearLayout_3.setContentDescription("0");
+                    holder.linearLayout_3.setBackgroundResource(R.drawable.cardstyle8);
+                }
+
+            }
+        });
+
+
+
+
+
+
+
+
+
     }
 
     @Override
@@ -61,6 +113,7 @@ public class AdapterRecyclerFavCategories extends RecyclerView.Adapter<AdapterRe
     public class ViewHolder extends RecyclerView.ViewHolder{
             ImageView imageView_1,imageView_2,imageView_3;
             TextView textView_1,textView_2,textView_3;
+            LinearLayout linearLayout_1,linearLayout_2,linearLayout_3;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView_1=itemView.findViewById(R.id.imgview_1_logup3);
@@ -69,6 +122,9 @@ public class AdapterRecyclerFavCategories extends RecyclerView.Adapter<AdapterRe
             textView_1=itemView.findViewById(R.id.textview_1_logup3);
             textView_2=itemView.findViewById(R.id.textview_2_logup3);
             textView_3=itemView.findViewById(R.id.textview_3_logup3);
+            linearLayout_1=itemView.findViewById(R.id.linear_1);
+            linearLayout_2=itemView.findViewById(R.id.linear_2);
+            linearLayout_3=itemView.findViewById(R.id.linear_3);
         }
     }
 

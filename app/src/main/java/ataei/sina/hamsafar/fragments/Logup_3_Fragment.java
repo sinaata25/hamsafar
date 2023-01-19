@@ -66,12 +66,6 @@ public class Logup_3_Fragment extends Fragment {
     }
 
     private void handle() {
-        LogupActivity.check_2=new LogupActivity.Check() {
-            @Override
-            public void onclicked(ViewPager viewPager, StepProgressView stepProgressView) {
-            stepProgressView.nextStep(true);
-            }
-        };
 
     }
 

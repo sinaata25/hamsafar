@@ -20,6 +20,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.funrisestudio.stepprogress.StepProgressView;
 
+import java.util.List;
+
 import ataei.sina.hamsafar.LogupActivity;
 import ataei.sina.hamsafar.R;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -28,6 +30,7 @@ public class Logup_2_Fragment extends Fragment {
     View view;
     ImageView img;
     CircleImageView circleImageView;
+    Uri img_uri;
     int SELECT_PICTURE = 200;
     @Nullable
     @Override
@@ -57,14 +60,13 @@ public class Logup_2_Fragment extends Fragment {
             }
         });
         ///
-        LogupActivity.check_1=new LogupActivity.Check() {
+        LogupActivity.check_1=new LogupActivity.Check_1() {
             @Override
-            public void onclicked(ViewPager viewPager, StepProgressView stepProgressView) {
-                    viewPager.setCurrentItem(2);
-                    stepProgressView.nextStep(true);
-
+            public Uri onclicked() {
+                return img_uri;
             }
         };
+
 
 
 
@@ -116,6 +118,7 @@ public class Logup_2_Fragment extends Fragment {
                     // update the preview image in the layout
                     img.setVisibility(View.GONE);
                     circleImageView.setVisibility(View.VISIBLE);
+                    img_uri=selectedImageUri;
                     circleImageView.setImageURI(selectedImageUri);
                 }
             }

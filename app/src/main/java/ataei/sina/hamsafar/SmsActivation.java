@@ -7,7 +7,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -135,11 +137,19 @@ public class SmsActivation extends AppCompatActivity {
                     JSONArray jsonArray=new JSONArray(response);
                     JSONObject jsonObject=jsonArray.getJSONObject(0);
                     user.setUsername((String) jsonObject.get("username"));
+                    SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("shared", Context.MODE_PRIVATE);
                     if(user.getUsername().equals("")){
                         Intent intent=new Intent(SmsActivation.this,LogupActivity.class);
+                        intent.putExtra("number","+98"+number);
                         startActivity(intent);
                         finish();
                     }else {
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putInt("login",1);
+                        String num="+98"+number;
+                        editor.putString("number",num);
+                        editor.apply();
+                        finish();
                         Intent intent=new Intent(SmsActivation.this,MainActivity.class);
                         startActivity(intent);
                         finish();

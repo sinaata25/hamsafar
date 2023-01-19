@@ -6,6 +6,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle.xml" value="0.157" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle1.xml" value="0.204" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle6.xml" value="0.1535" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle9.xml" value="0.1775" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle2.xml" value="0.171" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle3.xml" value="0.171" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle4.xml" value="0.1975" />
@@ -25,7 +26,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page_items.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro.xml" value="0.2" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_1_fragment.xml" value="0.5" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_1_fragment.xml" value="0.25" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_2_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_3_fragment.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/intro_4_fragment.xml" value="0.20416666666666666" />
