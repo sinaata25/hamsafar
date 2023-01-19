@@ -35,18 +35,24 @@
                     android:orientation="horizontal">
 
 
+                    <ImageView
+                        android:id="@+id/star_img"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/star" />
+
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/special_kind"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/vazir_bold"
                         android:layout_gravity="center_vertical"
-                        android:textColor="#2B9348"
-                        android:gravity="center"
-                        android:background="@drawable/cardstyle7"/>
+                        android:fontFamily="@font/vazir_bold"
+                        android:gravity="left"
+                        android:text="4.5"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="2dp"/>
 
                     <TextView
                         android:id="@+id/name"
@@ -99,73 +105,81 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/date_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/vazir"
-                        android:gravity="right"
-                        android:text="15 بهمن "
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
-
-                    <ImageView
-                        android:id="@+id/date_img"
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/date" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/star_img"
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
+                        android:id="@+id/button2"
+                        android:layout_width="60dp"
+                        android:layout_height="24dp"
+                        android:text="@string/join_ride"
                         android:layout_gravity="center_vertical"
-                        android:src="@mipmap/star" />
-
-                    <TextView
-                        android:id="@+id/rate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="left"
                         android:fontFamily="@font/vazir_bold"
-                        android:text="4.5"
-                        android:textColor="@color/black"
-                        android:textSize="12sp"
-                        android:layout_marginLeft="2dp"/>
+                        android:textSize="8sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@drawable/cardstyle1"
+                        />
 
-                    <TextView
-                        android:id="@+id/price_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/vazir"
-                        android:gravity="right"
-                        android:text="5000000"
-                        android:textColor="@color/black"
-                        android:textSize="9sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/price_img"
-                        android:layout_width="10dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="right"
-                        android:src="@mipmap/price" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal">
 
+                            <TextView
+                                android:id="@+id/date_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/vazir"
+                                android:gravity="right"
+                                android:text="15 بهمن "
+                                android:textColor="@color/black"
+                                android:textSize="9sp" />
+
+                            <ImageView
+                                android:id="@+id/date_img"
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/date" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/price_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/vazir"
+                                android:gravity="right"
+                                android:text="5000000"
+                                android:textColor="@color/black"
+                                android:textSize="9sp" />
+
+                            <ImageView
+                                android:id="@+id/price_img"
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:src="@mipmap/price" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

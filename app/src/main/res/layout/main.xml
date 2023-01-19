@@ -46,14 +46,14 @@
             android:onClick="Discovery_clicked"/>
 
         <ImageView
-            android:id="@+id/History_bot"
+            android:id="@+id/BookMark_bot"
             android:layout_width="27dp"
             android:layout_height="27dp"
             android:layout_gravity="center"
             android:layout_marginLeft="40dp"
             android:layout_weight="1"
-            android:src="@mipmap/history"
-            android:onClick="History_clicked"/>
+            android:src="@mipmap/bookmark"
+            android:onClick="BookMark_clicked"/>
 
         <ImageView
             android:id="@+id/Profile_bot"

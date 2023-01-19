@@ -3,32 +3,30 @@ package ataei.sina.hamsafar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ImageView;
 
-import ataei.sina.hamsafar.adapters.main_page_adapter;
+import ataei.sina.hamsafar.adapters.MainPageAdapter;
 import ataei.sina.hamsafar.fragments.DiscoveryFragment;
-import ataei.sina.hamsafar.fragments.HistoryFragment;
+import ataei.sina.hamsafar.fragments.BookMarkFragment;
 import ataei.sina.hamsafar.fragments.HomeFragment;
 import ataei.sina.hamsafar.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     ViewPager2 main_viewpager;
-    ImageView Home_bot , Discovery_bot , History_bot , Profile_bot;
-    main_page_adapter adapter;
+    ImageView Home_bot , Discovery_bot , BookMark_bot , Profile_bot;
+    MainPageAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setUpViews();
-        adapter = new main_page_adapter(getSupportFragmentManager(), getLifecycle() , getApplicationContext());
+        adapter = new MainPageAdapter(getSupportFragmentManager(), getLifecycle() , getApplicationContext());
         adapter.addFragment(new HomeFragment());
         adapter.addFragment(new DiscoveryFragment());
-        adapter.addFragment(new HistoryFragment());
+        adapter.addFragment(new BookMarkFragment());
         adapter.addFragment(new ProfileFragment());
 
         main_viewpager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
@@ -48,12 +46,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         if(x == 2){
-            History_bot.setImageResource(R.mipmap.history);
+            BookMark_bot.setImageResource(R.mipmap.bookmark);
             return;
         }
         if(x == 3){
             Profile_bot.setImageResource(R.mipmap.profile);
-            return;
         }
     }
 
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         main_viewpager = findViewById(R.id.main_viewpager);
         Home_bot = findViewById(R.id.Home_bot);
         Discovery_bot = findViewById(R.id.Discovery_bot);
-        History_bot = findViewById(R.id.History_bot);
+        BookMark_bot = findViewById(R.id.BookMark_bot);
         Profile_bot = findViewById(R.id.Profile_bot);
     }
 
@@ -82,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
         main_viewpager.setCurrentItem(1);
 
     }
-    public void History_clicked(View view) {
+    public void BookMark_clicked(View view) {
 
         unselected(main_viewpager.getCurrentItem());
-        History_bot.setImageResource(R.mipmap.history_selected);
+        BookMark_bot.setImageResource(R.mipmap.bookmark_selected);
         main_viewpager.setCurrentItem(2);
 
     }
