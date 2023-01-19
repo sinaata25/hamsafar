@@ -19,6 +19,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AdDetails"
+            android:exported="false" />
+        <activity
             android:name=".AskToTrip"
             android:exported="false" />
         <activity
@@ -32,10 +35,10 @@
         </activity>
         <activity
             android:name=".LoadingActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LogupActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SmsActivation"
             android:exported="true" />
@@ -47,7 +50,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <receiver
             android:name=".services.SMSBroadcastReceiver"

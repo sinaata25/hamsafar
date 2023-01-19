@@ -34,7 +34,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
     @Override
     public void onBindViewHolder(@NonNull AdapterRecycleAds.ViewHolder holder, int position) {
         Advertisment advertisment = ads.get(position);
-        holder.price_text.setText(String.valueOf(advertisment.getPrice()));
+        holder.price_text.setText(String.valueOf(advertisment.getPrice() + " تومان"));
         holder.location_text.setText(String.valueOf(advertisment.getOrigin() + " - " + advertisment.getDestination()));
         holder.time_text.setText(String.valueOf(advertisment.getTime()));
         holder.date_text.setText(String.valueOf(advertisment.getDate()));

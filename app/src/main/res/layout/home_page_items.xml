@@ -90,7 +90,7 @@
                     android:id="@+id/location_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="7dp"
                     android:layout_weight="10"
                     android:fontFamily="@font/vazir"
                     android:gravity="right"
@@ -100,7 +100,7 @@
 
                 <ImageView
                     android:id="@+id/location_img"
-                    android:layout_width="13dp"
+                    android:layout_width="16dp"
                     android:layout_height="match_parent"
                     android:src="@mipmap/location" />
 

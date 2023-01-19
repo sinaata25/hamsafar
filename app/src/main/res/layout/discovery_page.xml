@@ -229,49 +229,7 @@
         android:layout_marginHorizontal="24dp"
         android:id="@+id/special"
         android:orientation="vertical"
-        android:background="@color/black"
         />
-
-    <TextView
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/special"
-        android:layout_width="283dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="32dp"
-        android:id="@+id/more"
-        android:text="@string/see_more"
-        android:fontFamily="@font/vazir_bold"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:background="@drawable/cardstyle1"
-        />
-
-    <TextView
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/more"
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginRight="24dp"
-        android:text="@string/last_min"
-        android:fontFamily="@font/vazir_bold"
-        android:textSize="14sp"
-        android:textColor="@color/black" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="24dp"
-            android:background="@color/black"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView9" />
 
         <TextView
             android:id="@+id/best_dest"
@@ -284,7 +242,7 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recyclerView" />
+            app:layout_constraintTop_toBottomOf="@id/special" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
