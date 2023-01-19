@@ -4,6 +4,366 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".AdDetails">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/profile_header"
+        android:scaleType="fitXY"/>
+
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageView19"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"/>
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageView20"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/like"/>
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:paddingBottom="40dp"
+        android:background="@drawable/cardstyle5"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="25dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="32dp">
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/star"/>
+
+                    <TextView
+                        android:id="@+id/detail_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/vazir_bold"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:text="4.5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:id="@+id/detail_driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/vazir_bold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="علی احمدی"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:layout_marginRight="8dp"
+                        />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/detail_profile_img"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/profile_header" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="جزئیات"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_marginTop="40dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/primary_blue"
+                        app:cardCornerRadius="10dp"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:src="@mipmap/detail_car"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:id="detail_text_car"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:text="TextView"
+                                android:fontFamily="@font/vazir_bold"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="@color/primary_blue"
+                        app:cardCornerRadius="10dp"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:src="@mipmap/detail_time"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:id="detail_text_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp"
+                                android:layout_weight="0.1"
+                                android:layout_gravity="center"
+                                android:text="TextView"
+                                android:fontFamily="@font/vazir_bold"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="@color/primary_blue"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:src="@mipmap/detail_date"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:id="detail_text_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:text="TextView"
+                                android:fontFamily="@font/vazir_bold"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="@color/primary_blue"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/detail_detenation" />
+
+                            <TextView
+                                android:id="detail_text_destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:text="TextView"
+                                android:fontFamily="@font/vazir_bold"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="@color/primary_blue"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/detail_origin" />
+
+                            <TextView
+                                android:id="detail_text_origin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="center"
+                                android:text="TextView"
+                                android:fontFamily="@font/vazir_bold"
+                                android:textSize="11sp"
+                                android:gravity="center"
+                                android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="توضیحات"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/detail_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/vazir"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:text="شیراز ( آوا)، کلان‌شهری در ایران و مرکز استان فارس در جنوب کشور است. جمعیت کلانشهر شیراز بر اساس سرشماری سال ۱۳۹۵، بالغ بر ۱٬۵۶۵٬۵۷۲ تن بوده است که بر این اساس، شیراز پنجمین شهر بزرگ و پرجمعیت ایران و پرجمعیت‌ترین شهر جنوب کشور به‌شمار می‌رود.
+شیراز در بخش مرکزی استان فارس، در ارتفاع ۱۴۸۶ متر از سطح دریا و در منطقهٔ کوهستانی زاگرس واقع شده و آب‌وهوای معتدلی دارد. این شهر، از سمت غرب به کوه دراک، از سمت شمال به کوه‌های بمو، سبزپوشان، چهل‌مقام و باباکوهی (از رشته‌کوه‌های زاگرس) محدود شده‌است.
+کوه دِراک (کوه مادر، کوه برفی، کوه مستسقی) کوهی است در شهر شیراز که از غرب این شهر آغاز شده و با گذشتن از شمال غرب شهر ادامه یافته و به روستای علی آباد منتهی می‌شود"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/detail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/cardstyle8"
+                        android:backgroundTint="@color/orange"
+                        android:fontFamily="@font/vazir"
+                        android:gravity="center"
+                        android:text="50000 تومان"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/detail_order"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0.7"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/cardstyle1"
+                        android:fontFamily="@font/vazir_bold"
+                        android:gravity="center"
+                        android:text="درخواست سفر"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
