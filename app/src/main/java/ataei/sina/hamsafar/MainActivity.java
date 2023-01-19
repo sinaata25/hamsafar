@@ -4,35 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ImageView;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import ataei.sina.hamsafar.adapters.main_page_adapter;
 import ataei.sina.hamsafar.fragments.DiscoveryFragment;
 import ataei.sina.hamsafar.fragments.HistoryFragment;
 import ataei.sina.hamsafar.fragments.HomeFragment;
 import ataei.sina.hamsafar.fragments.ProfileFragment;
-import ataei.sina.hamsafar.model.User;
-import ataei.sina.hamsafar.statics.keys;
-import ataei.sina.hamsafar.statics.urls;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,62 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setUpViews();
-        handle();
-        getCurrentUser();
-
-    }
-
-    private void getCurrentUser() {
-        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("shared", Context.MODE_PRIVATE);
-        String number= sharedPref.getString("number","");
-        User user=new User();
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, urls.url_get_user_by_phone, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONArray jsonArray=new JSONArray(response);
-                    JSONObject jsonObject=jsonArray.getJSONObject(0);
-                    user.setId(jsonObject.getInt("id"));
-                    user.setUsername(jsonObject.getString("username"));
-                    user.setName(jsonObject.getString("name"));
-                    user.setFamily(jsonObject.getString("family"));
-                    user.setPhone(jsonObject.getString("phone"));
-                    SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("shared", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putInt("id",user.getId());
-                    editor.putString("username",user.getUsername());
-                    editor.putString("name",user.getName());
-                    editor.putString("family",user.getFamily());
-                    editor.apply();
-                } catch (JSONException e) {
-                    System.out.println(e.getMessage());
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                System.out.println(error.getMessage());
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> param;
-                param = new HashMap<>();
-                param.put("key", keys.key_get_user_by_phone);
-                param.put("phone", number);
-                return param;
-            }
-
-        };
-        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
-        stringRequest.setRetryPolicy(new DefaultRetryPolicy());
-        requestQueue.add(stringRequest);
-
-
-    }
-
-    private void handle() {
         adapter = new main_page_adapter(getSupportFragmentManager(), getLifecycle() , getApplicationContext());
         adapter.addFragment(new HomeFragment());
         adapter.addFragment(new DiscoveryFragment());
@@ -110,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         main_viewpager.setCurrentItem(0);
         main_viewpager.setAdapter(adapter);
         main_viewpager.setUserInputEnabled(false);
+
     }
 
     private void unselected(int x) {

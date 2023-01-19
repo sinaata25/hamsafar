@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import ataei.sina.hamsafar.R;
 
-public class HistoryFragment extends Fragment {
+public class BookMarkFragment extends Fragment {
     @Nullable
     View view;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.history_page,container,false);
+        view=inflater.inflate(R.layout.bookmark_page,container,false);
         return view;
     }
 
