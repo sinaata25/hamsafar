@@ -26,7 +26,6 @@ public class AdapterRecycleSpecial extends RecyclerView.Adapter<AdapterRecycleSp
     List<Advertisment> specialAds;
     List<City_Province>list_city;
     List<City_Province>list_province;
-
     Context context;
 
     public AdapterRecycleSpecial(List<Advertisment> ads , Context context,List<City_Province>list_city,List<City_Province>list_province) {

@@ -168,7 +168,7 @@ public class DiscoveryFragment extends Fragment {
                         ads.add(advertisment);
                     }
 
-                    suggested_recycler.setAdapter(new AdapterRecycleSuggested(ads , getContext()));
+                    suggested_recycler.setAdapter(new AdapterRecycleSuggested(ads , getContext(),list_city,list_privince));
                 } catch (JSONException e) {
                     System.out.println(e);
                 }
