@@ -69,6 +69,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
             public void onClick(View v) {
                 Intent intent=new Intent(ctx,AdDetails.class);
                 intent.putExtra("adv",advertisment);
+                intent.putExtra("image",img);
                 intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
                 ctx.startActivity(intent);
 
