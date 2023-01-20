@@ -14,7 +14,7 @@
         android:background="@drawable/cardstyle6"
         android:fontFamily="@font/vazir"
         android:gravity="center_vertical|right"
-        android:hint="@string/origin"
+        android:hint="جستوجو شهر"
         android:inputType="textPersonName"
         android:maxLength="50"
         android:paddingRight="40dp"

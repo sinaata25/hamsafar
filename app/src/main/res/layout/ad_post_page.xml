@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textColor="@color/primary_blue"
+        android:fontFamily="@font/vazir_bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/back_black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:layout_marginTop="120dp"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/post_text_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:fontFamily="@font/vazir"
+                android:gravity="top|right"
+                android:hint="توضیحات"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLines="5"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/post_text_origin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.4"
+                android:background="@drawable/post_items"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="مبدا"
+                android:inputType="textPersonName"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/post_text_destination"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="مقصد"
+                android:inputType="textPersonName"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextDate2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:ems="10"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="تاریخ حرکت"
+                android:inputType="date"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:ems="10"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="زمان حرکت"
+                android:inputType="time"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:ems="10"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="ماشین"
+                android:inputType="textPersonName"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/post_items"
+                android:ems="10"
+                android:fontFamily="@font/vazir"
+                android:gravity="right|center"
+                android:hint="هزینه سفر"
+                android:inputType="numberDecimal"
+                android:paddingRight="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_60"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/post_take_trip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/cardstyle1"
+                android:fontFamily="@font/vazir_bold"
+                android:gravity="center"
+                android:text="@string/join_ride"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
