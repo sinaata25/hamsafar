@@ -2,9 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/primary_blue"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linear_home_main"
+        android:visibility="gone"
+        android:background="@color/primary_blue"
+        android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -66,5 +73,60 @@
         android:layout_height="match_parent"
         android:background="@drawable/cardstyle5"
         android:orientation="vertical" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:id="@+id/constraint_home_loading"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/car_load" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/vazir"
+            android:textColor="@color/gray_60"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="40dp"
+            android:text="@string/wait"
+            android:gravity="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
+            app:layout_constraintVertical_bias="0.593" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
 
 </LinearLayout>

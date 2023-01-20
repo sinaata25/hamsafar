@@ -10,17 +10,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.model.Advertisment;
+import ataei.sina.hamsafar.model.City_Province;
 
 public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.ViewHolder> {
     List<Advertisment> ads;
     Context ctx;
-    public AdapterRecycleAds(List<Advertisment> ads , Context context) {
+    List<City_Province>list_city;
+    List<City_Province>list_province;
+    public AdapterRecycleAds(List<Advertisment> ads , Context context, List<City_Province>list_city,List<City_Province>list_province) {
         this.ads = ads;
         ctx = context;
+        this.list_province=list_province;
+        this.list_city=list_city;
     }
 
     @NonNull
@@ -39,9 +46,31 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
         holder.time_text.setText(String.valueOf(advertisment.getTime()));
         holder.date_text.setText(String.valueOf(advertisment.getDate()));
         holder.driver_name.setText(String.valueOf(advertisment.getName()));
+        String img= findImg(advertisment.getDestination());
+        if(!img.equals("")){
+            Picasso.get()
+                    .load(img)
+                    .fit()
+                    .into(holder.ad_img);
+        }
+    }
 
+    String findImg(String destination){
+        String url="";
+        int h = 0;
+        for (int i = 0; i < list_city.size(); i++) {
+            if(destination.equals(list_city.get(i).getTitle())){
+                h=i;
+                break;
+            }
+        }
 
-
+        for (int i = 0; i < list_province.size(); i++) {
+            if(list_city.get(h).getParent()==list_province.get(i).getId()){
+               url= list_province.get(i).getImage();
+            }
+        }
+        return url;
 
     }
 
@@ -53,7 +82,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView driver_name , rate , location_text , date_text , time_text , car_text , price_text ,hamsafarshoo;
-        ImageView profile_img;
+        ImageView ad_img;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +94,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
             car_text = itemView.findViewById(R.id.car_text);
             price_text = itemView.findViewById(R.id.price_text);
             hamsafarshoo = itemView.findViewById(R.id.hamsafarshoo);
+           ad_img=itemView.findViewById(R.id.imageView_home);
         }
     }
 }
