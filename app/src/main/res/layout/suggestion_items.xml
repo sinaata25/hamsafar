@@ -9,6 +9,7 @@
     >
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/suggestion_card"
         android:layout_width="182dp"
         android:layout_height="320dp"
         app:cardCornerRadius="20dp"

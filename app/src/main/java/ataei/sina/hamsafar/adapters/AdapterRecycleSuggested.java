@@ -1,16 +1,19 @@
 package ataei.sina.hamsafar.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ataei.sina.hamsafar.AdDetails;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.model.Advertisment;
 
@@ -38,6 +41,18 @@ public class AdapterRecycleSuggested extends RecyclerView.Adapter<AdapterRecycle
         holder.date.setText(advertisment.getDate());
         holder.price.setText(advertisment.getPrice()+" تومان");
         holder.origin_destiantion.setText(advertisment.getOrigin()+" - "+advertisment.getDestination());
+
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, AdDetails.class);
+                intent.putExtra("adv",advertisment);
+                intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -47,12 +62,15 @@ public class AdapterRecycleSuggested extends RecyclerView.Adapter<AdapterRecycle
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView name,origin_destiantion,date,price;
+
+        CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             price=itemView.findViewById(R.id.price_text_suggestion);
             name=itemView.findViewById(R.id.driver_name_suggestion);
             origin_destiantion=itemView.findViewById(R.id.location_text_suggestion);
             date=itemView.findViewById(R.id.date_text_suggestion);
+            cardView=itemView.findViewById(R.id.suggestion_card);
 
 
         }
