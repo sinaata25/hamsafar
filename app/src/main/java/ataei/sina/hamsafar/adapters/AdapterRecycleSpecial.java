@@ -12,20 +12,28 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import ataei.sina.hamsafar.AdDetails;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.model.Advertisment;
+import ataei.sina.hamsafar.model.City_Province;
 
 public class AdapterRecycleSpecial extends RecyclerView.Adapter<AdapterRecycleSpecial.ViewHolder>{
 
     List<Advertisment> specialAds;
+    List<City_Province>list_city;
+    List<City_Province>list_province;
+
     Context context;
 
-    public AdapterRecycleSpecial(List<Advertisment> ads , Context context) {
+    public AdapterRecycleSpecial(List<Advertisment> ads , Context context,List<City_Province>list_city,List<City_Province>list_province) {
         specialAds = ads;
         this.context = context;
+        this.list_city=list_city;
+        this.list_province=list_province;
     }
 
     @NonNull
@@ -44,17 +52,43 @@ public class AdapterRecycleSpecial extends RecyclerView.Adapter<AdapterRecycleSp
         holder.date_text_special.setText(String.valueOf(advertisment.getDate()));
         holder.driver_name_special.setText(String.valueOf(advertisment.getName()));
 
-
+        String img= findImg(advertisment.getDestination());
+        if(!img.equals("")){
+            Picasso.get()
+                    .load(img)
+                    .fit()
+                    .into(holder.imgview);
+        }
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, AdDetails.class);
                 intent.putExtra("adv",advertisment);
-                intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                intent.putExtra("image",img);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
 
             }
         });
+
+    }
+
+    String findImg(String destination){
+        String url="";
+        int h = 0;
+        for (int i = 0; i < list_city.size(); i++) {
+            if(destination.equals(list_city.get(i).getTitle())){
+                h=i;
+                break;
+            }
+        }
+
+        for (int i = 0; i < list_province.size(); i++) {
+            if(list_city.get(h).getParent()==list_province.get(i).getId()){
+                url= list_province.get(i).getImage();
+            }
+        }
+        return url;
 
     }
 
@@ -69,8 +103,7 @@ public class AdapterRecycleSpecial extends RecyclerView.Adapter<AdapterRecycleSp
 
         CardView cardView;
 
-        ImageView ad_img;
-
+        ImageView imgview;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             price_text_special = itemView.findViewById(R.id.price_text_special);
@@ -79,7 +112,7 @@ public class AdapterRecycleSpecial extends RecyclerView.Adapter<AdapterRecycleSp
             driver_name_special = itemView.findViewById(R.id.driver_name_special);
             rate_special = itemView.findViewById(R.id.rate_special);
             cardView=itemView.findViewById(R.id.special_card);
-            ad_img=itemView.findViewById(R.id.result_img_ad);
+            imgview=itemView.findViewById(R.id.special_img_ad);
         }
     }
 }

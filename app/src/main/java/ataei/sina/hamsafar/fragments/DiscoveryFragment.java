@@ -44,6 +44,7 @@ import ataei.sina.hamsafar.adapters.AdapterRecycleAds;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSpecial;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSuggested;
 import ataei.sina.hamsafar.model.Advertisment;
+import ataei.sina.hamsafar.model.City_Province;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
 import ir.hamsaa.persiandatepicker.PersianDatePickerDialog;
@@ -56,13 +57,14 @@ public class DiscoveryFragment extends Fragment {
     View view;
     TextView time_pick,origin,destination,search_button;
     RecyclerView special,suggested_recycler;
+    List<City_Province>list_city;
+    List<City_Province>list_privince;
     public static DataInter dataInter;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.discovery_page,container,false);
         setUpViews();
         sets();
-        getSpecialAdData();
-        getSuggestedAdData();
+        getCities();
         handle();
         return view;
     }
@@ -215,7 +217,7 @@ public class DiscoveryFragment extends Fragment {
                         ads.add(advertisment);
                     }
 
-                    special.setAdapter(new AdapterRecycleSpecial(ads , getContext()));
+                    special.setAdapter(new AdapterRecycleSpecial(ads , getContext(),list_city,list_privince));
                 } catch (JSONException e) {
                     System.out.println(e);
                 }
@@ -243,6 +245,8 @@ public class DiscoveryFragment extends Fragment {
     private void sets() {
         special.setLayoutManager(new LinearLayoutManager(getContext() ,RecyclerView.VERTICAL , false));
         suggested_recycler.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+        list_city=new ArrayList<>();
+        list_privince=new ArrayList<>();
     }
 
     private void setUpViews() {
@@ -256,10 +260,62 @@ public class DiscoveryFragment extends Fragment {
 
 
 
+    private void getCities() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, urls.url_get_all_cities, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray jsonArray=new JSONArray(response);
+                    list_city=new ArrayList<>();
+                    list_privince=new ArrayList<>();
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject=jsonArray.getJSONObject(i);
+                        City_Province city_province=new City_Province();
+                        city_province.setId(jsonObject.getInt("id"));
+                        city_province.setParent(jsonObject.getInt("parent"));
+                        city_province.setTitle(jsonObject.getString("title"));
+                        city_province.setImage(jsonObject.getString("image"));
+                        if(i<31){
+                            list_privince.add(city_province);
+                        }else {
+                            list_city.add(city_province);
+                        }
+
+                    }
+                    getSpecialAdData();
+                    getSuggestedAdData();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error.getMessage());
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> param;
+                param = new HashMap<>();
+                param.put("key", keys.key_get_all_cities);
+                return param;
+            }
+
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(getContext());
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy());
+        requestQueue.add(stringRequest);
+    }
+
+
+
     public interface DataInter{
         void onChoosedOrigin(String city);
         void onChoosedDestination(String city);
     }
+
 
 
 }
