@@ -49,7 +49,9 @@ public class HomeFragment extends Fragment {
     LinearLayout linearLayoutHome;
     ConstraintLayout constraintLayoutLoading;
     List<City_Province>list_city;
+    public static AdComplete adComplete;
     List<City_Province>list_privince;
+
     @Nullable
     View view;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -57,7 +59,17 @@ public class HomeFragment extends Fragment {
         setUpViews();
         sets();
         getCities();
+        handle();
         return view;
+    }
+
+    private void handle() {
+        adComplete=new AdComplete() {
+            @Override
+            public void complete() {
+                getCities();
+            }
+        };
     }
 
     private void getData() {
@@ -171,6 +183,10 @@ public class HomeFragment extends Fragment {
         textView_welcome=view.findViewById(R.id.textView5_home);
         linearLayoutHome=view.findViewById(R.id.linear_home_main);
         constraintLayoutLoading=view.findViewById(R.id.constraint_home_loading);
+    }
+
+    public interface AdComplete{
+        void complete();
     }
 
 
