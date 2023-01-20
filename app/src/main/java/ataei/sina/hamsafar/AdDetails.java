@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
 import ataei.sina.hamsafar.model.Advertisment;
 
 public class AdDetails extends AppCompatActivity {
-        TextView detail,origin,destination,date,time,car,username,ask;
+        TextView detail,origin,destination,date,time,car,username,ask,price;
         ImageView back,cover_image;
     Advertisment advertisment;
     String img="";
@@ -46,6 +46,7 @@ public class AdDetails extends AppCompatActivity {
                     .fit()
                     .into(cover_image);
         }
+        price.setText(advertisment.getPrice()+" تومان");
 
     }
 
@@ -59,6 +60,7 @@ public class AdDetails extends AppCompatActivity {
         back=findViewById(R.id.detail_buttom_back);
         cover_image=findViewById(R.id.imageView5);
         ask=findViewById(R.id.detail_buttom_order);
+        price=findViewById(R.id.detail_buttom_price);
     }
 
     private void handle() {

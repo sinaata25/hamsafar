@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ataei.sina.hamsafar.CityPicker;
+import ataei.sina.hamsafar.NewAdv;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.fragments.DiscoveryFragment;
 import ataei.sina.hamsafar.model.Advertisment;
@@ -66,8 +67,14 @@ public class AdapterRecycleCityPicker extends RecyclerView.Adapter<AdapterRecycl
                 if(mode==0){
                     DiscoveryFragment.dataInter.onChoosedOrigin(city_province.getTitle());
                     CityPicker.hanDa.onFinish();
-                }else {
+                }else if(mode==1) {
                     DiscoveryFragment.dataInter.onChoosedDestination(city_province.getTitle());
+                    CityPicker.hanDa.onFinish();
+                }else if(mode==2){
+                    NewAdv.dataCh.onChoosedOrigin(city_province.getTitle());
+                    CityPicker.hanDa.onFinish();
+                }else {
+                    NewAdv.dataCh.onChoosedDestination(city_province.getTitle());
                     CityPicker.hanDa.onFinish();
                 }
             }

@@ -5,6 +5,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +41,7 @@ import ataei.sina.hamsafar.statics.urls;
 public class MainActivity extends AppCompatActivity {
 
     ViewPager2 main_viewpager;
-    ImageView Home_bot , Discovery_bot , BookMark_bot , Profile_bot;
+    ImageView Home_bot , Discovery_bot , BookMark_bot , Profile_bot,add_bot;
     MainPageAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         Discovery_bot = findViewById(R.id.Discovery_bot);
         BookMark_bot = findViewById(R.id.BookMark_bot);
         Profile_bot = findViewById(R.id.Profile_bot);
+        add_bot=findViewById(R.id.imageView6);
     }
 
 
@@ -158,6 +160,11 @@ public class MainActivity extends AppCompatActivity {
         Discovery_bot.setImageResource(R.mipmap.dicover_selected);
         main_viewpager.setCurrentItem(1);
 
+    }
+
+    public void add_clicked(View view) {
+        Intent intent=new Intent(getApplicationContext(),NewAdv.class);
+        startActivity(intent);
     }
     public void BookMark_clicked(View view) {
 

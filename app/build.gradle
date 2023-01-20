@@ -39,6 +39,7 @@ dependencies {
     implementation 'com.github.funriser:StepProgress:0.1.0'
     implementation 'com.github.aliab:Persian-Date-Picker-Dialog:1.8.0'
     implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.airbnb.android:lottie:5.2.0'
     implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3'
