@@ -1,6 +1,7 @@
 package ataei.sina.hamsafar.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import ataei.sina.hamsafar.AdDetails;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.model.Advertisment;
 import ataei.sina.hamsafar.model.City_Province;
@@ -53,6 +56,26 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
                     .fit()
                     .into(holder.ad_img);
         }
+
+        holder.hamsafarshoo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ctx,AdDetails.class);
+                intent.putExtra("adv",advertisment);
+                intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                ctx.startActivity(intent);
+
+            }
+        });
+
+
     }
 
     String findImg(String destination){
@@ -83,7 +106,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
 
         TextView driver_name , rate , location_text , date_text , time_text , car_text , price_text ,hamsafarshoo;
         ImageView ad_img;
-
+        CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             driver_name = itemView.findViewById(R.id.driver_name);
@@ -94,7 +117,8 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
             car_text = itemView.findViewById(R.id.car_text);
             price_text = itemView.findViewById(R.id.price_text);
             hamsafarshoo = itemView.findViewById(R.id.hamsafarshoo);
-           ad_img=itemView.findViewById(R.id.imageView_home);
+            ad_img=itemView.findViewById(R.id.imageView_home);
+            cardView=itemView.findViewById(R.id.items_home);
         }
     }
 }

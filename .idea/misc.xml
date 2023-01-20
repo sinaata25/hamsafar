@@ -23,7 +23,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading_intro.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ad_details.xml" value="0.1" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ad_details.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ask_to_trip.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/city_picker.xml" value="0.17607802874743325" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/discovery_page.xml" value="0.33" />
@@ -54,7 +54,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

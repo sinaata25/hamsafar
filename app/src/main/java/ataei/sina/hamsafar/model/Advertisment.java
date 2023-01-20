@@ -1,6 +1,8 @@
 package ataei.sina.hamsafar.model;
 
-public class Advertisment {
+import java.io.Serializable;
+
+public class Advertisment implements Serializable {
 
 int id , id_user , price ;
 String origin , destination , time , date , description , name;
