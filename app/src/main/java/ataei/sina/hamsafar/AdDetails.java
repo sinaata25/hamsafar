@@ -8,13 +8,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import ataei.sina.hamsafar.model.Advertisment;
 
 public class AdDetails extends AppCompatActivity {
-        TextView detail,origin,destination,date,time,car,username;
-
-        ImageView back;
+        TextView detail,origin,destination,date,time,car,username,ask;
+        ImageView back,cover_image;
     Advertisment advertisment;
+    String img="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class AdDetails extends AppCompatActivity {
 
     private void getIntents() {
         Intent intent=getIntent();
+        img=intent.getStringExtra("image");
         advertisment= (Advertisment) intent.getSerializableExtra("adv");
     }
 
@@ -37,6 +40,12 @@ public class AdDetails extends AppCompatActivity {
         time.setText(advertisment.getTime());
         date.setText(advertisment.getDate());
         username.setText(advertisment.getName());
+        if(!img.equals("")){
+            Picasso.get()
+                    .load(img)
+                    .fit()
+                    .into(cover_image);
+        }
 
     }
 
@@ -48,6 +57,8 @@ public class AdDetails extends AppCompatActivity {
         date=findViewById(R.id.detail_text_date);
         username=findViewById(R.id.detail_driver_name);
         back=findViewById(R.id.detail_buttom_back);
+        cover_image=findViewById(R.id.imageView5);
+        ask=findViewById(R.id.detail_buttom_order);
     }
 
     private void handle() {
@@ -58,12 +69,18 @@ public class AdDetails extends AppCompatActivity {
                 finish();
             }
         });
-    }
 
-   public interface DataL{
-        void onGetL(Advertisment advertisment);
-    }
+        ask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),AskToTrip.class);
+                startActivity(intent);
+            }
+        });
 
+
+
+    }
 
 
 
