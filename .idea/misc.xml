@@ -22,7 +22,9 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_loading_intro.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ad_details.xml" value="0.1" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ask_to_trip.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/city_picker.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/discovery_page.xml" value="0.33" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/history_page.xml" value="0.3046875" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page.xml" value="0.2" />
@@ -40,6 +42,8 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/logup_activity.xml" value="0.18" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/main.xml" value="0.18" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/profile_page.xml" value="0.22" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_item.xml" value="0.45611702127659576" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.25" />

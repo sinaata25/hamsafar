@@ -144,7 +144,7 @@
                                 android:layout_gravity="center"/>
 
                             <TextView
-                                android:id="detail_text_car"
+                                android:id="@+id/detail_text_car"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
@@ -179,7 +179,7 @@
                                 android:layout_gravity="center" />
 
                             <TextView
-                                android:id="detail_text_time"
+                                android:id="@+id/detail_text_time"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="3dp"
@@ -215,7 +215,7 @@
                                 android:layout_gravity="center" />
 
                             <TextView
-                                android:id="detail_text_date"
+                                android:id="@+id/detail_text_date"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
@@ -250,7 +250,7 @@
                                 android:src="@mipmap/detail_detenation" />
 
                             <TextView
-                                android:id="detail_text_destination"
+                                android:id="@+id/detail_text_destination"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
@@ -285,7 +285,7 @@
                                 android:src="@mipmap/detail_origin" />
 
                             <TextView
-                                android:id="detail_text_origin"
+                                android:id="@+id/detail_text_origin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"

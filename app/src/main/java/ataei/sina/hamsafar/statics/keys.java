@@ -8,4 +8,5 @@ public class keys {
     public static String key_logup="#fsgdsfh8923#qq8@4@h#f3uq@#";
     public static String key_get_suggested_ads="asd##213ewdAFKLKJj98u";
     public static String key_get_special_ads="####**asdAsdm9823ejm#asxd**";
+    public static String key_get_all_cities="#@#@4rfrf20f3413ewdqs8**";
 }

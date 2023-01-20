@@ -2,6 +2,7 @@ package ataei.sina.hamsafar.fragments;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ataei.sina.hamsafar.CityPicker;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.adapters.AdapterRecycleAds;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSpecial;
@@ -51,7 +53,7 @@ import ir.hamsaa.persiandatepicker.util.PersianCalendarUtils;
 public class DiscoveryFragment extends Fragment {
     @Nullable
     View view;
-    TextView time_pick;
+    TextView time_pick,origin,destination;
     RecyclerView special,suggested_recycler;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.discovery_page,container,false);
@@ -65,6 +67,20 @@ public class DiscoveryFragment extends Fragment {
 
     private void handle() {
         time_pick.setOnClickListener(V->datePick());
+        origin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), CityPicker.class);
+                startActivity(intent);
+            }
+        });
+        destination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getContext(), CityPicker.class);
+                startActivity(intent);
+            }
+        });
     }
 
     void datePick(){
@@ -202,6 +218,8 @@ public class DiscoveryFragment extends Fragment {
         special = view.findViewById(R.id.special);
         suggested_recycler=view.findViewById(R.id.suggestion);
         time_pick=view.findViewById(R.id.go_time);
+        origin=view.findViewById(R.id.origin);
+        destination=view.findViewById(R.id.destination);
     }
 
 }
