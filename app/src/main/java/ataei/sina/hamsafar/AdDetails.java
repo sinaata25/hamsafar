@@ -76,6 +76,10 @@ public class AdDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),AskToTrip.class);
+                intent.putExtra("origin", advertisment.getOrigin());
+                intent.putExtra("destination", advertisment.getDestination());
+                intent.putExtra("date", advertisment.getDate());
+                intent.putExtra("time" , advertisment.getTime());
                 startActivity(intent);
             }
         });
