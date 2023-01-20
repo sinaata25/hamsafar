@@ -258,7 +258,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/vazir_bold"
-                            android:text="TextView"
+                            android:text="بوشهر"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -286,7 +286,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@mipmap/profile_header" />
+                            android:src="@mipmap/shiraz" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -297,7 +297,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
-                                android:text="TextView"
+                                android:text="شیراز"
                                 android:textColor="@color/white"
                                 android:textSize="24sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -320,7 +320,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@mipmap/profile_header" />
+                            android:src="@mipmap/namak_abrood" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -331,7 +331,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
-                                android:text="TextView"
+                                android:text="نمک آبرود"
                                 android:textColor="@color/white"
                                 android:textSize="24sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -362,7 +362,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
-                            android:src="@mipmap/profile_header" />
+                            android:src="@mipmap/tehran" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -373,7 +373,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
-                                android:text="TextView"
+                                android:text="تهران"
                                 android:textColor="@color/white"
                                 android:textSize="24sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -402,7 +402,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
-                                android:src="@mipmap/profile_header" />
+                                android:src="@mipmap/esfehan" />
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
@@ -413,7 +413,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/vazir_bold"
-                                    android:text="TextView"
+                                    android:text="اصفهان"
                                     android:textColor="@color/white"
                                     android:textSize="24sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -436,7 +436,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
-                                android:src="@mipmap/profile_header" />
+                                android:src="@mipmap/hormoz" />
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
@@ -447,7 +447,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/vazir_bold"
-                                    android:text="TextView"
+                                    android:text="هرمز"
                                     android:textColor="@color/white"
                                     android:textSize="24sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
