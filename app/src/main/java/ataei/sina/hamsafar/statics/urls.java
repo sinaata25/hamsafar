@@ -9,4 +9,5 @@ public class urls {
     public static  String url_get_suggested_ads="http://assinapp.ir/get_suggested_ads.php";
     public static  String url_get_special_ads="http://assinapp.ir/get_special_ads.php";
     public static  String url_get_all_cities="http://assinapp.ir/get_all_cities.php";
+    public static  String url_search_ad="http://assinapp.ir/search_ad.php";
 }

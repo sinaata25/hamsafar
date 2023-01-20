@@ -9,4 +9,5 @@ public class keys {
     public static String key_get_suggested_ads="asd##213ewdAFKLKJj98u";
     public static String key_get_special_ads="####**asdAsdm9823ejm#asxd**";
     public static String key_get_all_cities="#@#@4rfrf20f3413ewdqs8**";
+    public static String key_saerch_ad="aofij23423HNC##csd3";
 }
