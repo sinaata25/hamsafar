@@ -39,6 +39,7 @@ import java.util.Map;
 
 import ataei.sina.hamsafar.CityPicker;
 import ataei.sina.hamsafar.R;
+import ataei.sina.hamsafar.SearchResult;
 import ataei.sina.hamsafar.adapters.AdapterRecycleAds;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSpecial;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSuggested;
@@ -53,7 +54,7 @@ import ir.hamsaa.persiandatepicker.util.PersianCalendarUtils;
 public class DiscoveryFragment extends Fragment {
     @Nullable
     View view;
-    TextView time_pick,origin,destination;
+    TextView time_pick,origin,destination,search_button;
     RecyclerView special,suggested_recycler;
     public static DataInter dataInter;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -96,6 +97,20 @@ public class DiscoveryFragment extends Fragment {
             }
         };
 
+
+        search_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    if(origin.getText().toString() != null && destination.getText().toString() != null && time_pick.getText().toString() != null ){
+                        Intent intent=new Intent(getContext(), SearchResult.class);
+                        intent.putExtra("origin",origin.getText().toString() );
+                        intent.putExtra("destination",destination.getText().toString() );
+                        intent.putExtra("date",time_pick.getText().toString());
+                        startActivity(intent);
+                    }
+
+            }
+        });
 
     }
 
@@ -236,7 +251,10 @@ public class DiscoveryFragment extends Fragment {
         time_pick=view.findViewById(R.id.go_time);
         origin=view.findViewById(R.id.origin);
         destination=view.findViewById(R.id.destination);
+        search_button=view.findViewById(R.id.search_button);
     }
+
+
 
     public interface DataInter{
         void onChoosedOrigin(String city);
