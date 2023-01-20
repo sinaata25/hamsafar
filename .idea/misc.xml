@@ -6,6 +6,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle.xml" value="0.157" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle1.xml" value="0.204" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle10.xml" value="0.1945" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle11.xml" value="0.1945" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle6.xml" value="0.1535" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable-v24/cardstyle9.xml" value="0.1775" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/drawable/cardstyle2.xml" value="0.171" />
@@ -24,7 +25,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ad_details.xml" value="0.1" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/ask_to_trip.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/city_picker.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/city_picker.xml" value="0.17607802874743325" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/discovery_page.xml" value="0.33" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/history_page.xml" value="0.3046875" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/home_page.xml" value="0.2" />
@@ -44,6 +45,7 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/profile_page.xml" value="0.22" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_item.xml" value="0.45611702127659576" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_result.xml" value="0.18697916666666667" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.25" />
@@ -52,7 +54,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

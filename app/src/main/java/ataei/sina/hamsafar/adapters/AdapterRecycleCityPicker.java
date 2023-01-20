@@ -7,11 +7,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ataei.sina.hamsafar.CityPicker;
 import ataei.sina.hamsafar.R;
+import ataei.sina.hamsafar.fragments.DiscoveryFragment;
 import ataei.sina.hamsafar.model.Advertisment;
 import ataei.sina.hamsafar.model.City_Province;
 
@@ -20,11 +23,13 @@ public class AdapterRecycleCityPicker extends RecyclerView.Adapter<AdapterRecycl
     List<City_Province> list;
     List<City_Province> list_province;
     Context context;
+    int mode;
 
-    public AdapterRecycleCityPicker(List<City_Province> list , Context context,List<City_Province>list_province) {
+    public AdapterRecycleCityPicker(List<City_Province> list , Context context,List<City_Province>list_province,int mode) {
         this.list = list;
         this.context = context;
         this.list_province=list_province;
+        this.mode=mode;
     }
 
     @NonNull
@@ -55,6 +60,21 @@ public class AdapterRecycleCityPicker extends RecyclerView.Adapter<AdapterRecycl
 
         }
                 holder.province.setText(par);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mode==0){
+                    DiscoveryFragment.dataInter.onChoosedOrigin(city_province.getTitle());
+                    CityPicker.hanDa.onFinish();
+                }else {
+                    DiscoveryFragment.dataInter.onChoosedDestination(city_province.getTitle());
+                    CityPicker.hanDa.onFinish();
+                }
+            }
+        });
+
+
+
 
 
     }
@@ -66,10 +86,12 @@ public class AdapterRecycleCityPicker extends RecyclerView.Adapter<AdapterRecycl
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView city,province;
+        CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             city=itemView.findViewById(R.id.textView17);
             province=itemView.findViewById(R.id.textView9);
+            cardView=itemView.findViewById(R.id.card_search_item);
 
 
         }

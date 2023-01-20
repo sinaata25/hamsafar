@@ -6,24 +6,29 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <TextView
+
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/city_name"
         android:layout_marginTop="56dp"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
+        app:iconifiedByDefault="false"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="56dp"
-        android:background="@drawable/cardstyle6"
+        android:background="@drawable/cardstyle10"
         android:fontFamily="@font/vazir"
         android:gravity="center_vertical|right"
         android:hint="جستوجو شهر"
         android:inputType="textPersonName"
         android:maxLength="50"
-        android:paddingRight="40dp"
-        android:textColor="@color/gray_60"
-        android:textColorHint="@color/gray_60"
+        android:paddingRight="10dp"
+        android:focusedByDefault="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_80"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/imageView12"

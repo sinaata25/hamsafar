@@ -55,6 +55,7 @@ public class DiscoveryFragment extends Fragment {
     View view;
     TextView time_pick,origin,destination;
     RecyclerView special,suggested_recycler;
+    public static DataInter dataInter;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view=inflater.inflate(R.layout.discovery_page,container,false);
         setUpViews();
@@ -71,6 +72,7 @@ public class DiscoveryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getContext(), CityPicker.class);
+                intent.putExtra("mode",0);
                 startActivity(intent);
             }
         });
@@ -78,9 +80,23 @@ public class DiscoveryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getContext(), CityPicker.class);
+                intent.putExtra("mode",1);
                 startActivity(intent);
             }
         });
+        dataInter=new DataInter() {
+            @Override
+            public void onChoosedOrigin(String city) {
+                origin.setText(city);
+            }
+
+            @Override
+            public void onChoosedDestination(String city) {
+            destination.setText(city);
+            }
+        };
+
+
     }
 
     void datePick(){
@@ -221,5 +237,11 @@ public class DiscoveryFragment extends Fragment {
         origin=view.findViewById(R.id.origin);
         destination=view.findViewById(R.id.destination);
     }
+
+    public interface DataInter{
+        void onChoosedOrigin(String city);
+        void onChoosedDestination(String city);
+    }
+
 
 }
