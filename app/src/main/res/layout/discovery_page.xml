@@ -243,7 +243,7 @@
                     app:cardCornerRadius="20dp">
 
                     <ImageView
-                        android:id="@+id/img1"
+                        android:id="@+id/discovery_img1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
@@ -254,7 +254,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/text_img1"
+                            android:id="@+id/discovery_text_img1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/vazir_bold"
@@ -282,7 +282,7 @@
                         app:cardCornerRadius="20dp">
 
                         <ImageView
-                            android:id="@+id/img2"
+                            android:id="@+id/discovery_img2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
@@ -293,7 +293,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/text_img2"
+                                android:id="@+id/discovery_text_img2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
@@ -316,7 +316,7 @@
                         app:cardCornerRadius="20dp">
 
                         <ImageView
-                            android:id="@+id/img3"
+                            android:id="@+id/discovery_img3"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
@@ -327,7 +327,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/text_img3"
+                                android:id="@+id/discovery_text_img3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
@@ -358,7 +358,7 @@
                         app:cardCornerRadius="20dp">
 
                         <ImageView
-                            android:id="@+id/img4"
+                            android:id="@+id/discovery_img4"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:scaleType="fitXY"
@@ -369,7 +369,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:id="@+id/text_img4"
+                                android:id="@+id/discovery_text_img4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/vazir_bold"
@@ -398,7 +398,7 @@
                             app:cardCornerRadius="20dp">
 
                             <ImageView
-                                android:id="@+id/img5"
+                                android:id="@+id/discovery_img5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
@@ -409,7 +409,7 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
-                                    android:id="@+id/text_img5"
+                                    android:id="@+id/discovery_text_img5"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/vazir_bold"
@@ -432,7 +432,7 @@
                             app:cardCornerRadius="20dp">
 
                             <ImageView
-                                android:id="@+id/img6"
+                                android:id="@+id/discovery_img6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:scaleType="fitXY"
@@ -443,7 +443,7 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
-                                    android:id="@+id/text_img6"
+                                    android:id="@+id/discovery_text_img6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/vazir_bold"

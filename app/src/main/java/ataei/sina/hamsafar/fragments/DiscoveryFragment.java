@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ataei.sina.hamsafar.BestDestination;
 import ataei.sina.hamsafar.CityPicker;
 import ataei.sina.hamsafar.R;
 import ataei.sina.hamsafar.SearchResult;
@@ -56,6 +58,9 @@ public class DiscoveryFragment extends Fragment {
     @Nullable
     View view;
     TextView time_pick,origin,destination,search_button;
+    TextView best_city1 , best_city2 , best_city3 , best_city4 , best_city5 , best_city6;
+
+    ImageView city_image1 , city_image2 , city_image3 , city_image4 , city_image5 , city_image6;
     RecyclerView special,suggested_recycler;
     List<City_Province>list_city;
     List<City_Province>list_privince;
@@ -103,7 +108,7 @@ public class DiscoveryFragment extends Fragment {
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    if(origin.getText().toString() != null && destination.getText().toString() != null && time_pick.getText().toString() != null ){
+                    if(!origin.getText().toString().equals("") && !destination.getText().toString().equals("") && !time_pick.getText().toString().equals("") ){
                         Intent intent=new Intent(getContext(), SearchResult.class);
                         intent.putExtra("origin",origin.getText().toString() );
                         intent.putExtra("destination",destination.getText().toString() );
@@ -111,6 +116,60 @@ public class DiscoveryFragment extends Fragment {
                         startActivity(intent);
                     }
 
+            }
+        });
+
+        city_image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city1.getText().toString() );
+                startActivity(intent);
+            }
+        });
+
+        city_image2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city2.getText().toString() );
+                startActivity(intent);
+            }
+        });
+
+        city_image3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city3.getText().toString() );
+                startActivity(intent);
+            }
+        });
+
+        city_image4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city4.getText().toString() );
+                startActivity(intent);
+            }
+        });
+
+        city_image5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city5.getText().toString() );
+                startActivity(intent);
+            }
+        });
+
+        city_image6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getContext(), BestDestination.class);
+                intent.putExtra("destination",best_city6.getText().toString() );
+                startActivity(intent);
             }
         });
 
@@ -258,6 +317,18 @@ public class DiscoveryFragment extends Fragment {
         origin=view.findViewById(R.id.origin);
         destination=view.findViewById(R.id.destination);
         search_button=view.findViewById(R.id.search_button);
+        city_image1 = view.findViewById(R.id.discovery_img1);
+        city_image2 = view.findViewById(R.id.discovery_img2);
+        city_image3 = view.findViewById(R.id.discovery_img3);
+        city_image4 = view.findViewById(R.id.discovery_img4);
+        city_image5 = view.findViewById(R.id.discovery_img5);
+        city_image6 = view.findViewById(R.id.discovery_img6);
+        best_city1 = view.findViewById(R.id.discovery_text_img1);
+        best_city2 = view.findViewById(R.id.discovery_text_img2);
+        best_city3 = view.findViewById(R.id.discovery_text_img3);
+        best_city4 = view.findViewById(R.id.discovery_text_img4);
+        best_city5 = view.findViewById(R.id.discovery_text_img5);
+        best_city6 = view.findViewById(R.id.discovery_text_img6);
     }
 
 
