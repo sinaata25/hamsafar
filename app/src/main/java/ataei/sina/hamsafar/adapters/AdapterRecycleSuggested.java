@@ -49,7 +49,7 @@ public class AdapterRecycleSuggested extends RecyclerView.Adapter<AdapterRecycle
         holder.date.setText(advertisment.getDate());
         holder.price.setText(advertisment.getPrice()+" تومان");
         holder.origin_destiantion.setText(advertisment.getOrigin()+" - "+advertisment.getDestination());
-
+        holder.name.setText(advertisment.getName());
 
         String img= findImg(advertisment.getDestination());
         if(!img.equals("")){

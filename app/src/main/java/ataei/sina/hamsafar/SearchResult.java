@@ -30,6 +30,7 @@ import java.util.Map;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSearchResult;
 import ataei.sina.hamsafar.adapters.AdapterRecycleSpecial;
 import ataei.sina.hamsafar.model.Advertisment;
+import ataei.sina.hamsafar.model.City_Province;
 import ataei.sina.hamsafar.statics.keys;
 import ataei.sina.hamsafar.statics.urls;
 
@@ -38,14 +39,15 @@ public class SearchResult extends AppCompatActivity {
 
     RecyclerView result_ads;
     ImageView result_back;
-
+    List<City_Province>list_city;
+    List<City_Province>list_privince;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_result);
         setUpViews();
         sets();
-        getsResultAds();
+        getCities();
         handle();
     }
 
@@ -81,7 +83,7 @@ public class SearchResult extends AppCompatActivity {
                         ads.add(advertisment);
                     }
 
-                    result_ads.setAdapter(new AdapterRecycleSearchResult(ads , getApplicationContext()));
+                    result_ads.setAdapter(new AdapterRecycleSearchResult(ads , getApplicationContext(),list_city,list_privince));
                 } catch (JSONException e) {
                     System.out.println(e);
                 }
@@ -113,6 +115,56 @@ public class SearchResult extends AppCompatActivity {
     private void sets() {
         result_ads.setLayoutManager(new LinearLayoutManager(getApplicationContext() ,RecyclerView.VERTICAL , false));
     }
+
+    private void getCities() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, urls.url_get_all_cities, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray jsonArray=new JSONArray(response);
+                    list_city=new ArrayList<>();
+                    list_privince=new ArrayList<>();
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject=jsonArray.getJSONObject(i);
+                        City_Province city_province=new City_Province();
+                        city_province.setId(jsonObject.getInt("id"));
+                        city_province.setParent(jsonObject.getInt("parent"));
+                        city_province.setTitle(jsonObject.getString("title"));
+                        city_province.setImage(jsonObject.getString("image"));
+                        if(i<31){
+                            list_privince.add(city_province);
+                        }else {
+                            list_city.add(city_province);
+                        }
+
+                    }
+                   getsResultAds();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.println(error.getMessage());
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> param;
+                param = new HashMap<>();
+                param.put("key", keys.key_get_all_cities);
+                return param;
+            }
+
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        stringRequest.setRetryPolicy(new DefaultRetryPolicy());
+        requestQueue.add(stringRequest);
+    }
+
+
 
     private void setUpViews() {
         result_ads = findViewById(R.id.result_ads);
