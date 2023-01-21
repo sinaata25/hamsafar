@@ -48,10 +48,10 @@
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_item.xml" value="0.45611702127659576" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_result.xml" value="0.18697916666666667" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_result_items.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/search_result_items.xml" value="0.2" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/sms_activation.xml" value="0.1798063623789765" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.25" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/special_items.xml" value="0.5" />
+        <entry key="..\:/Android/hamsafar/app/src/main/res/layout/suggestion_items.xml" value="0.33" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/test.xml" value="0.16" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/trips_preview.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/hamsafar/app/src/main/res/layout/verification_sets.xml" value="0.22" />

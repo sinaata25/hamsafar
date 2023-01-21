@@ -40,6 +40,7 @@ public class AdDetails extends AppCompatActivity {
         time.setText(advertisment.getTime());
         date.setText(advertisment.getDate());
         username.setText(advertisment.getName());
+        car.setText(advertisment.getCar());
         if(!img.equals("")){
             Picasso.get()
                     .load(img)
@@ -61,6 +62,7 @@ public class AdDetails extends AppCompatActivity {
         cover_image=findViewById(R.id.imageView5);
         ask=findViewById(R.id.detail_buttom_order);
         price=findViewById(R.id.detail_buttom_price);
+        car=findViewById(R.id.detail_text_car);
     }
 
     private void handle() {

@@ -49,6 +49,7 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
         holder.time_text.setText(String.valueOf(advertisment.getTime()));
         holder.date_text.setText(String.valueOf(advertisment.getDate()));
         holder.driver_name.setText(String.valueOf(advertisment.getName()));
+        holder.car_text.setText(advertisment.getCar());
         String img= findImg(advertisment.getDestination());
         if(!img.equals("")){
             Picasso.get()
@@ -60,7 +61,11 @@ public class AdapterRecycleAds extends RecyclerView.Adapter<AdapterRecycleAds.Vi
         holder.hamsafarshoo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(ctx,AdDetails.class);
+                intent.putExtra("adv",advertisment);
+                intent.putExtra("image",img);
+                intent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                ctx.startActivity(intent);
             }
         });
 

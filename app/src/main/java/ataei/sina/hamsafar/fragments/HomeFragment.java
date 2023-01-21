@@ -92,6 +92,7 @@ public class HomeFragment extends Fragment {
                         advertisment.setDate(jObject.getString("date"));
                         advertisment.setPrice(jObject.getInt("price"));
                         advertisment.setName(jObject.getString("name"));
+                        advertisment.setCar(jObject.getString("car"));
                         ads.add(advertisment);
                     }
 

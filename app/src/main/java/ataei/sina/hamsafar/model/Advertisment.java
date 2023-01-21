@@ -5,7 +5,8 @@ import java.io.Serializable;
 public class Advertisment implements Serializable {
 
 int id , id_user , price ;
-String origin , destination , time , date , description , name;
+String origin , destination , time , date , description , name,car;
+
 
     public int getId() {
         return id;
@@ -77,5 +78,13 @@ String origin , destination , time , date , description , name;
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCar() {
+        return car;
+    }
+
+    public void setCar(String car) {
+        this.car = car;
     }
 }
