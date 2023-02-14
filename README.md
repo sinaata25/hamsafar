@@ -1,8 +1,3 @@
-# hamsafar![Screenshot_2023-02-14-02-08-23-727_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672938-c1b6186d-9935-4497-9c64-aacfd1ae2584.jpg)
-![Screenshot_2023-02-14-02-08-36-406_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672947-12c1adaa-e84c-4b80-9203-9b1e49e23951.jpg)
-![Screenshot_2023-02-14-10-57-19-379_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672952-a1b9a393-d76b-4cf3-ba23-b426d7771965.jpg)
-![Screenshot_2023-02-14-10-57-28-115_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672976-e2c7a2cd-96b5-497c-be2a-262750b2a564.jpg)
-![Screenshot_2023-02-14-10-57-31-643_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672978-99ac83e8-39c4-46ff-8377-0af65d2ab27d.jpg)
-![Screenshot_2023-02-14-10-57-37-462_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672986-0881f88b-2660-426c-8dff-109f4dacb9b3.jpg)
-![Screenshot_2023-02-14-10-57-43-942_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672988-5b517039-4879-46cb-8fcc-66b739902d21.jpg)
-![Screenshot_2023-02-14-10-57-57-288_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218672990-f32dd57c-2d70-4c81-8654-7382abb8902b.jpg)
+# hamsafar![Screenshot_2023-02-14-02-08-23-727_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218673507-a1679012-7864-4000-90a6-05fadaaa5159.jpg)
+![Screenshot_2023-02-14-02-08-36-406_ataei sina hamsafar](https://user-images.githubusercontent.com/78935067/218673514-c84beb2a-b9e3-4ded-8ea3-29e1c28af201.jpg)
+
